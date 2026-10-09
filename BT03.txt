@@ -1,0 +1,25 @@
+SESSION05
+Bài 3 : Kiến trúc sư hạ tầng server chuyên nghiệp
+
+Tên lớp: HCM K26 CNTT2
+Môn học: Nhập môn công nghệ thông tin
+Họ và tên: LƯƠNG THANH THƯ
+
++ Bảng sơ đồ luồng IPO.
+
+Input (Đầu vào)	                                                    Process (Xử lý)	                                        Output (Đầu ra)
+Tên các thư mục: smart-farm\data\logs, 
+smart-farm\code, smart-farm\backup	                   Tạo cây thư mục lồng nhau (1 dòng lệnh)	                    Cây thư mục smart-farm
+ 
+Tên 3 file: config.json, sensors.py, .env	              Tạo cùng lúc 3 file (1 dòng lệnh)	                            3 file trống trong code
+
+Thư mục nguồn smart-farm\code	                             Sao chép đệ quy sang thư mục đích	                             Bản sao backup\code_v1
+
+
++ Danh sách lệnh PowerShell đã sử dụng
+
+powershell
+
+New-Item -ItemType Directory -Force -Path "smart-farm\data\logs", "smart-farm\code", "smart-farm\backup"
+New-Item -ItemType File -Path "smart-farm\code\config.json", "smart-farm\code\sensors.py", "smart-farm\code\.env"
+Copy-Item -Path "smart-farm\code" -Destination "smart-farm\backup\code_v1" -Recurse
